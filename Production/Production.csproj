@@ -42,8 +42,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\KeesDijk\closure.js" />
     <Content Include="js\KeesDijk\higherOrderFunctions.js" />
     <Content Include="js\KeesDijk\niceCalculator.js" />
+    <Content Include="js\Start\closure.js" />
     <Content Include="js\Start\higherOrderFunctions.js" />
     <Content Include="js\Start\niceCalculator.js" />
     <Content Include="Scripts\lodash.js" />

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DIJKKEESTestImplementation.cs" />
+    <Compile Include="Helpers\ClosureHelper.cs" />
     <Compile Include="STARTTestImplementation.cs" />
     <Compile Include="Interfaces\ITestImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

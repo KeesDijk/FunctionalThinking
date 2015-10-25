@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClosureTests.cs" />
     <Compile Include="ComposingFunctionTests.cs" />
     <Compile Include="HigherOrderFunctionsTests.cs" />
     <Compile Include="IntroductionTests.cs" />

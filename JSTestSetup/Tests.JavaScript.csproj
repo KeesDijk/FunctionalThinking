@@ -47,6 +47,7 @@
   <ItemGroup>
     <Content Include="Calculator\config.js" />
     <Content Include="Calculator\Tests\higherOrderFunctions.test.js" />
+    <Content Include="Calculator\Tests\closure.test.js" />
     <Content Include="Calculator\Tests\niceCalculator.test.js" />
   </ItemGroup>
   <ItemGroup>

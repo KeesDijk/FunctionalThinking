@@ -17,5 +17,6 @@ namespace Functions.Interfaces
         int SimpleReduceFunction(List<int> input);
         int SlightlyLessSimpleReduceFunction(List<int> input,int seed, Func<int, int, int> aggregateFunc);
         List<int> FirstFiveIndexesOfFarInFarFarAway(List<string> text);
+        int CallCounterNrOfTimes(int times);
     }
 }

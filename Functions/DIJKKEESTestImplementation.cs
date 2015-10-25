@@ -92,6 +92,18 @@ namespace Functions
             return enumerable.ToList();
         }
 
+        public int CallCounterNrOfTimes(int times)
+        {
+            int result = 0;
+            var closureHelper = new ClosureHelper();
+            for (int i = 0; i < times; i++)
+            {
+                var counterFunc = closureHelper.GetCounter();
+                result = counterFunc();
+            }
+            return result;
+        }
+
         private static void FillListWithUniqueValues(int nrOfUniqueItems, Func<string> getFunction, List<string> resultList)
         {
             var i = 0;
