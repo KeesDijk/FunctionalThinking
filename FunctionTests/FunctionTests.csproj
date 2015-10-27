@@ -84,6 +84,7 @@
     <Compile Include="ComposingFunctionTests.cs" />
     <Compile Include="HigherOrderFunctionsTests.cs" />
     <Compile Include="IntroductionTests.cs" />
+    <Compile Include="MemoizationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecursionTests.cs" />
     <Compile Include="TestBase.cs" />

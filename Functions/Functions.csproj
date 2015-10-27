@@ -45,6 +45,7 @@
     <Compile Include="CurryAndPartial\PartialApplicationExtensions.cs" />
     <Compile Include="DIJKKEESTestImplementation.cs" />
     <Compile Include="Helpers\ClosureHelper.cs" />
+    <Compile Include="Memoization\MemoizationExtensions.cs" />
     <Compile Include="Monads\Identity.cs" />
     <Compile Include="Monads\IdentityExtensions.cs" />
     <Compile Include="Monads\Maybe.cs" />

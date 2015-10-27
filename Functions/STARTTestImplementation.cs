@@ -253,5 +253,17 @@ namespace Functions
             }
             return result;
         }
+
+        public int Fibonaci(int input, int times = 1)
+        {
+            Func<int, int> fib = null;
+            fib = n => n > 1 ? fib(n - 1) + fib(n - 2) : n;
+            int fibonaci = 0;
+            for (int i = 0; i < times; i++)
+            {
+                fibonaci = fib.Invoke(input);
+            }
+            return fibonaci;
+        }
     }
 }

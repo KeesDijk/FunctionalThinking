@@ -5,6 +5,7 @@ using System.Numerics;
 using Functions.Base;
 using Functions.Helpers;
 using Functions.Interfaces;
+using Functions.Memoization;
 using Functions.Recursion;
 
 namespace Functions
@@ -124,6 +125,19 @@ namespace Functions
         {
             BigInteger result = TailRecursion.Execute(() => Factorial(x, 1));
             return result;
+        }
+
+        public int Fibonaci(int input, int times)
+        {
+            Func<int, int> fib = null;
+            fib = n => n > 1 ? fib(n - 1) + fib(n - 2) : n;
+            fib = fib.Memoize();
+            int fibonaci = 0;
+            for (int i = 0; i < times; i++)
+            {
+                fibonaci = fib.Invoke(input);
+            }
+            return fibonaci;
         }
 
         private RecursionResult<BigInteger> Factorial(int n, BigInteger product)

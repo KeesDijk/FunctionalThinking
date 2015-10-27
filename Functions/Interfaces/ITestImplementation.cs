@@ -22,5 +22,6 @@ namespace Functions.Interfaces
         BigInteger Factorial(int x);
         BigInteger FactorialTail(int x, BigInteger product);
         BigInteger FactorialTrampoline(int x);
+        int Fibonaci(int input, int times = 1);
     }
 }
