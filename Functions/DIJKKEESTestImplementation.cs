@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using Functions.Base;
 using Functions.Helpers;
 using Functions.Interfaces;
+using Functions.Recursion;
 
 namespace Functions
 {
@@ -102,6 +104,33 @@ namespace Functions
                 result = counterFunc();
             }
             return result;
+        }
+
+        public BigInteger Factorial(int x)
+        {
+            if (x == 0)
+                return 1;
+            return x * Factorial(x - 1);
+        }
+
+        public BigInteger FactorialTail(int x, BigInteger product)
+        {
+            if (x < 2)
+                return product;
+            return FactorialTail(x - 1, x * product);
+        }
+
+        public BigInteger FactorialTrampoline(int x)
+        {
+            BigInteger result = TailRecursion.Execute(() => Factorial(x, 1));
+            return result;
+        }
+
+        private RecursionResult<BigInteger> Factorial(int n, BigInteger product)
+        {
+            if (n < 2)
+                return TailRecursion.Return(product);
+            return TailRecursion.Next(() => Factorial(n - 1, n * product));
         }
 
         private static void FillListWithUniqueValues(int nrOfUniqueItems, Func<string> getFunction, List<string> resultList)

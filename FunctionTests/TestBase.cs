@@ -20,8 +20,8 @@ namespace FunctionTests
         {
             Type t = typeof (ITestImplementation);
             
-            //GlobalIocContainer.Instance().RegisterUserSpecificITypesOf(t.Assembly);
-            GlobalIocContainer.Instance().RegisterUserSpecificITypesOf(t.Assembly, "START");
+            GlobalIocContainer.Instance().RegisterUserSpecificITypesOf(t.Assembly);
+            //GlobalIocContainer.Instance().RegisterUserSpecificITypesOf(t.Assembly, "START");
 
             Impl = GlobalIocContainer.Instance().Resolve<ITestImplementation>();
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using Functions.Base;
 using Functions.Helpers;
 using Functions.Interfaces;
@@ -219,6 +220,36 @@ namespace Functions
             {
                 var counterFunc = closureHelper.GetCounter();
                 result = counterFunc();
+            }
+            return result;
+        }
+
+        public BigInteger Factorial(int x)
+        {
+            BigInteger result = 1;
+            for (int i = x; i >= 2; i--)
+            {
+                result *= i;
+            }
+            return result;
+        }
+
+        public BigInteger FactorialTail(int x, BigInteger product)
+        {
+            BigInteger result = 1;
+            for (int i = x; i >= 2; i--)
+            {
+                result *= i;
+            }
+            return result;
+        }
+
+        public BigInteger FactorialTrampoline(int x)
+        {
+            BigInteger result = 1;
+            for (int i = x; i >= 2; i--)
+            {
+                result *= i;
             }
             return result;
         }

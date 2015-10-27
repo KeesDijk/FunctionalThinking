@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using Functions.Helpers;
 
 namespace Functions.Interfaces
@@ -18,5 +19,8 @@ namespace Functions.Interfaces
         int SlightlyLessSimpleReduceFunction(List<int> input,int seed, Func<int, int, int> aggregateFunc);
         List<int> FirstFiveIndexesOfFarInFarFarAway(List<string> text);
         int CallCounterNrOfTimes(int times);
+        BigInteger Factorial(int x);
+        BigInteger FactorialTail(int x, BigInteger product);
+        BigInteger FactorialTrampoline(int x);
     }
 }
